@@ -52,6 +52,15 @@ func init() {
             Filters: nil,
             Params: nil})
 
+    beego.GlobalControllerRouter["github.com/GorazdVeselic/beego-swager/controllers:TestController"] = append(beego.GlobalControllerRouter["github.com/GorazdVeselic/beego-swager/controllers:TestController"],
+        beego.ControllerComments{
+            Method: "Test",
+            Router: `/`,
+            AllowHTTPMethods: []string{"get"},
+            MethodParams: param.Make(),
+            Filters: nil,
+            Params: nil})
+
     beego.GlobalControllerRouter["github.com/GorazdVeselic/beego-swager/controllers:UserController"] = append(beego.GlobalControllerRouter["github.com/GorazdVeselic/beego-swager/controllers:UserController"],
         beego.ControllerComments{
             Method: "Post",
